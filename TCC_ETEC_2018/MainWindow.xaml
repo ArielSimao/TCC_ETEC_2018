@@ -12,10 +12,24 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="760" Width="1280"
+        >
     <Grid>
-        <materialDesign:Card Padding="32" Margin="16">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
-        </materialDesign:Card>
+        <Menu HorizontalAlignment="Left">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="Item 1" />
+            <MenuItem Header="Item 2" Style="{StaticResource MenuItemStyle1}">
+                <MenuItem Header="Sub item 1" />
+                <MenuItem Header="Sub item 2" />
+                <MenuItem Header="Sub item 3" />
+                <MenuItem Header="Sub item 4" />
+            </MenuItem>
+            <MenuItem Header="Item 3" />
+            <MenuItem Header="Item 4" />
+        </Menu>
     </Grid>
 </Window>
