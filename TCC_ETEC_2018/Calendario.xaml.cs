@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TCC_ETEC_2018
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para Calendario.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Calendario : Window
     {
-        public MainWindow()
+        public Calendario()
         {
             InitializeComponent();
         }
@@ -28,14 +27,15 @@ namespace TCC_ETEC_2018
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Calendario jan2 = new Calendario();
+            MainWindow jan2 = new MainWindow();
             jan2.Show();
+
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            MainWindow jan2 = new MainWindow();
+            Calendario jan2 = new Calendario();
             jan2.Show();
         }
     }

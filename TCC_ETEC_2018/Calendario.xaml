@@ -1,11 +1,10 @@
-﻿<Window x:Class="TCC_ETEC_2018.MainWindow"
+﻿<Window x:Class="TCC_ETEC_2018.Calendario"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TCC_ETEC_2018"
-        mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -13,9 +12,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="760" Width="1280"
-        Title="Bristol Zaniboni Hotel"
-        
-        >
+        Title="Calendario">
     <Grid>
         <Menu HorizontalAlignment="Left" Width="150" HorizontalContentAlignment="Center" Background="#FFE8E8E8">
             <Menu.ItemsPanel>
@@ -23,10 +20,20 @@
                     <StackPanel />
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Header="Home" Click="MenuItem_Click_1" />
-            <MenuItem Header="Calendario" Click="MenuItem_Click" />
-            <MenuItem Header="Item 3" />
+            <MenuItem Header="Home" Click="MenuItem_Click" />
+            <MenuItem Header="Calendario" Click="MenuItem_Click_1" />
+            <MenuItem Header="Reserva" />
             <MenuItem Header="Item 4" />
         </Menu>
+        <Calendar HorizontalAlignment="Left" Margin="246,10,0,0" VerticalAlignment="Top" FontSize="18" Padding="1,1,-4,1" BorderThickness="2" Background="#FFE8E8E8">
+            <Calendar.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF1498FB" Offset="1"/>
+                </LinearGradientBrush>
+            </Calendar.BorderBrush>
+        </Calendar>
     </Grid>
 </Window>
